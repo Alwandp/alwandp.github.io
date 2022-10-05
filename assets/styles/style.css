@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #ffffff;
+}
+
+header {
+  padding: 16px 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .drawer-button {
+  padding: 8px;
+  font-weight: bold;
+  font-size: 28px;
+  color: #1e1e1e;
+  background-color: transparent;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: none;
+}
+
+header img {
+  margin-right: 32px;
+  height: 36px;
+}
+
+header nav ul li {
+  display: inline;
+}
+
+header nav ul li a {
+  display: inline-block;
+  padding: 16px 32px;
+  color: #1e1e1e;
+  text-decoration: none;
+}
+
+header nav ul li a:hover {
+  color: #FF8165;
+}
+
+main {
+  padding: 16px 32px;
+  margin: 0 auto;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+}
+
+article {
+  padding: 5rem 0;
+}
+
+#hero {
+  text-align: center;
+}
+
+#hero .hero-text {
+  padding: 16px;
+}
+
+#hero .hero-text h2 {
+  font-size: 42px;
+  font-weight: bold;
+}
+
+#hero .hero-text p {
+  font-size: 18px;
+  margin-top: 16px;
+  color: #3B3B3B;
+}
+
+#hero .hero-image {
+  padding: 16px;
+}
+
+#hero .hero-image img {
+  width: 100%;
+  display: none;
+}
+
+#hero .hero-button {
+  margin-top: 32px;
+  padding: 12px;
+  border-radius: 8px;
+  color: white;
+  font-weight: 500;
+  background-color: #FF8165;
+  border: none;
+  cursor: pointer;
+}
+
+#hero .hero-button:hover {
+  background-color: #FFC4B7;
+}
+
+#feature h3 {
+  text-align: center;
+  font-size: 36px;
+}
+
+#feature h3::after {
+  content: "";
+  width: 150px;
+  height: 3px;
+  border-radius: 8px;
+  background-color: #FF8165;
+  display: block;
+  margin: 8px auto;
+}
+
+#feature .feature-container {
+  margin-top: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#feature .feature-container .feature-item {
+  width: 250px;
+  padding: 8px;
+  text-align: center;
+  margin-top: 16px;
+}
+
+#feature .feature-container .feature-item i {
+  font-size: 36px;
+  color: #FF8165;
+}
+
+#feature .feature-container .feature-item h4 {
+  margin-top: 16px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+#feature .feature-container .feature-item p {
+  color: #3b3b3b;
+}
+
+#about {
+  text-align: center;
+}
+
+#about .biodata h3 {
+  font-size: 36px;
+}
+
+#about .biodata h3::after {
+  content: "";
+  width: 150px;
+  height: 3px;
+  border-radius: 8px;
+  background-color: #FF8165;
+  display: block;
+  margin: 8px auto;
+}
+
+#about .biodata .card {
+  margin-top: 32px;
+  margin: 32px auto 0 auto;
+  border: 1px solid #3b3b3b;
+  width: 250px;
+  padding: 16px;
+  border-radius: 10px;
+}
+
+#about .biodata .card img {
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
+  width: 175px;
+  height: 175px;
+}
+
+#about .biodata .card h4 {
+  margin-top: 16px;
+  font-weight: 600;
+}
+
+#about .biodata .card p {
+  color: #3b3b3b;
+}
+
+#about .biodata .biodata-social i {
+  margin: 8px 4px;
+  font-size: 24px;
+  color: #1e1e1e;
+}
+
+#about .biodata .biodata-social i:hover {
+  color: #FF8165;
+}
+
+footer {
+  padding: 16px;
+}
+
+footer p {
+  text-align: center;
+  color: #1e1e1e;
+}
+
+footer span {
+  color: #FF8165;
+}
+
+@media (max-width: 750px) {
+  header .drawer-button {
+    display: inline-block;
+  }
+
+  header nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    transform: translateX(200px);
+    background-color: white;
+    min-height: 100vh;
+    width: 200px;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  header nav ul li, header nav ul li a {
+    display: block;
+  }
+
+  header nav.open {
+    transform: translateX(0);
+    box-shadow: -1px 0px 10px 0px rgba(0,0,0,0.25);
+  }
+
+  main {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 992px) {
+  #hero {
+    display: flex;
+    align-items: center;
+    text-align: left;
+  }
+
+  #hero .hero-text h2 {
+    font-size: 48px;
+    font-weight: bold;
+  }
+
+  #hero .hero-image img {
+    display: block;
+  }
+
+  #feature .feature-container .feature-item {
+    width: 200px;
+  }
+}
